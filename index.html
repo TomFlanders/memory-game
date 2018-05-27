@@ -17,70 +17,106 @@
 
         <section class="score-panel">
         	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
+        		<li id="star1"><i class="fa fa-star"></i></li>
+        		<li id="star2"><i class="fa fa-star"></i></li>
+        		<li id="star3"><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
+        	<span class="moves">0</span> Moves
 
-            <div class="restart">
+            <div class="timer">
+                <span id="seconds">0</span> Seconds
+            </div>
+
+            <div class="restart" onclick="reset()">
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
 
         <ul class="deck">
-            <li class="card">
+            <li class="card" id="c1" onclick="flipCard('c1')">
                 <i class="fa fa-diamond"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c2" onclick="flipCard('c2')">
                 <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card match">
+            <li class="card" id="c3" onclick="flipCard('c3')">
                 <i class="fa fa-anchor"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c4" onclick="flipCard('c4')">
                 <i class="fa fa-bolt"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c5" onclick="flipCard('c5')">
                 <i class="fa fa-cube"></i>
             </li>
-            <li class="card match">
+            <li class="card" id="c6" onclick="flipCard('c6')">
                 <i class="fa fa-anchor"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c7" onclick="flipCard('c7')">
                 <i class="fa fa-leaf"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c8" onclick="flipCard('c8')">
                 <i class="fa fa-bicycle"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c9" onclick="flipCard('c9')">
                 <i class="fa fa-diamond"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c10" onclick="flipCard('c10')">
                 <i class="fa fa-bomb"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c11" onclick="flipCard('c11')">
                 <i class="fa fa-leaf"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c12" onclick="flipCard('c12')">
                 <i class="fa fa-bomb"></i>
             </li>
-            <li class="card open show">
+            <li class="card" id="c13" onclick="flipCard('c13')">
                 <i class="fa fa-bolt"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c14" onclick="flipCard('c14')">
                 <i class="fa fa-bicycle"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c15" onclick="flipCard('c15')">
                 <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card">
+            <li class="card" id="c16" onclick="flipCard('c16')">
                 <i class="fa fa-cube"></i>
             </li>
         </ul>
     </div>
 
     <script src="js/app.js"></script>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-headline">You Win!!!</div>
+        <div class="winner">
+
+            <div class="winStars">
+            <ul class="stars">
+                    <li id="fstar1"><i class="fa fa-star"></i></li>
+                    <li id="fstar2"><i class="fa fa-star"></i></li>
+                    <li id="fstar3"><i class="fa fa-star"></i></li>
+                </ul>
+            </div>
+        <div class="winRow">
+            <span class="moves">0</span> Moves
+        </div>
+
+        <div class="winRow">
+            <span id="fseconds">0</span> Seconds
+        </div>
+
+        </div>
+
+        <span class="close" id="mClose" onclick="closeModal()"><button>Close</button></span>
+
+    </div>
+  
+  </div>
+
 </body>
 </html>
